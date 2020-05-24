@@ -54,3 +54,19 @@ Running the following command:
 Play with this at your own risk. This is really just here to show *that* you
 can integrate `idem-azurerm` into any POP apps/plugins... not *how* you should
 do it. It's pretty hacky and not even really a good use case.
+
+## POP Projects
+* https://gitlab.com/saltstack/pop
+* https://gitlab.com/saltstack/pop/pop-awesome
+
+## References
+* https://eitr.tech/blog/2020/05/07/Getting-Started-with-Idem-for-Microsoft-Azure.html
+* https://eitr.tech/blog/2020/05/15/idem-for-microsoft-azure-2.1-update.html
+* https://pop-book.readthedocs.io/en/latest/
+* https://pop.readthedocs.io/en/latest/
+* https://idem.readthedocs.io/en/latest/
+* https://gitlab.com/saltstack/pop
+* https://github.com/eitrtechnologies/idem-azurerm
+* https://idem-azurerm.readthedocs.io/en/latest/
+* https://github.com/nicholasmhughes/idem-azurerm-intro
+
