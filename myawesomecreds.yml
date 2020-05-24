@@ -1,0 +1,8 @@
+#!yaml
+
+azurerm:
+    default:
+        client_id: "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"
+        secret: "X2KRwdcdsQn9mwjdt0EbxsQR3w5TuBOR"
+        subscription_id: "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
+        tenant: "cccccccc-cccc-cccc-cccc-cccccccccccc"
