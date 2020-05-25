@@ -144,7 +144,7 @@ Ensure load balancer exists:
         rg,
         "Microsoft.Network",
         "networkInterfaces",
-        "vmidem00{0}-nic".format(i)
+        "vmidem00{0}-nic0".format(i)
       )
 -%}
 ensure_network_interface{{i}}_exists:
