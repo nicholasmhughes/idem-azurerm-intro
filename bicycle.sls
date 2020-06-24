@@ -4,7 +4,7 @@
 {%- set sub = hub.acct.PROFILES["azurerm"].get("default", {}).get("subscription_id") %}
 {%- set rg = "rg-bicycle" %}
 {%- set tags = {
-        "ApplicationName": "devopscolumbia",
+        "ApplicationName": "saltstackmeetup",
         "Approver": "nicholas.hughes@eitr.tech",
         "BudgetAmount": "$50.00",
         "BusinessUnit": "RESEARCH",
@@ -46,7 +46,7 @@
 ensure_resource_group_exists:
     azurerm.resource.group.present:
         - name: rg-bicycle
-        - location: eastus
+        - location: eastus2
         - tags: {{ tags }}
 
 ensure_network_security_group_exists:
@@ -79,7 +79,7 @@ ensure_network_security_group_exists:
 
 ensure_virtual_network_exists:
     azurerm.network.virtual_network.present:
-        - name: vnet-bike-eastus-001
+        - name: vnet-bike-eastus2-001
         - resource_group: rg-bicycle
         - address_prefixes:
             - "192.168.0.0/16"
@@ -95,7 +95,7 @@ Ensure public IP exists:
         - name: pip-bike-001
         - resource_group: rg-bicycle
         - dns_settings:
-            domain_name_label: devopscolumbia
+            domain_name_label: saltstackmeetup
         - sku: basic
         - public_ip_allocation_method: static
         - public_ip_address_version: ipv4
@@ -115,7 +115,7 @@ Ensure load balancer exists:
     azurerm.network.load_balancer.present:
         - name: lbe-bike-001
         - resource_group: rg-bicycle
-        - location: eastus
+        - location: eastus2
         - frontend_ip_configurations:
           - name: lbe-bike-feip-001
             public_ip_address: pip-bike-001
@@ -151,7 +151,7 @@ ensure_network_interface{{i}}_exists:
     azurerm.network.network_interface.present:
         - name: vmidem00{{i}}-nic0
         - subnet: default
-        - virtual_network: vnet-bike-eastus-001
+        - virtual_network: vnet-bike-eastus2-001
         - resource_group: rg-bicycle
         - ip_configurations:
           - name: vmidem00{{i}}-nic0-ipc0

@@ -7,7 +7,7 @@ $ python3 -m venv env
 
 $ source env/bin/activate
 
-(env) $ pip3 install idem-azurerm==2.2.0
+(env) $ pip3 install idem-azurerm==2.3.2
 ```
 
 ## Setting up credentials in acct
